@@ -131,6 +131,25 @@ console.log(spreadArr);
 
 
 
+//___________________________________________
+
+// OBJECT LITERAL NEW FEATURES //////////////
+//___________________________________________
+
+
+//we can use [variableName] in the object literal property or function name
+// variable name will be replaced with value
+
+let productType = 'Fridge';
+
+var objectLiteral = {
+
+[productType]: "SAMSUNG"
+
+}
+
+console.log(objectLiteral);
+
 
 
 
