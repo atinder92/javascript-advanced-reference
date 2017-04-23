@@ -19,7 +19,7 @@ const VERSION = 1.0;  // constant defined at global scope
 
 function displayName(){
     
-    let myName = "Atinder Pal"; // this variable is only defined to this function scope
+    let myName = "Atinder Pal"; // this variable only exists in this function scope
     console.log(name);
 
 }
@@ -106,6 +106,61 @@ displayProduct(300);
 
 // REST AND SPREAD //////////////////////////
 //___________________________________________
+
+
+//Example: In the example below the second parameter of function is written as ...products, which simply means it is an array
+
+
+function restExample(productId,...products){
+
+    console.log(products instanceof Array);
+
+}
+
+
+restExample(1,"TV","FRIDGE","LED");
+
+
+//SPREAD simply divides  an array, string into values
+//If we use ... on Array or string, it will spread them into values
+
+var spreadArr = ['A','B',..."CDE",'F'];
+
+
+console.log(spreadArr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
