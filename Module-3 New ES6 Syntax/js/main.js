@@ -19,7 +19,9 @@ const VERSION = 1.0;  // constant defined at global scope
 
 function displayName(){
     
-    let myName = "Atinder Pal"; // this variable only exists in this function scope
+    // this variable only exists in this function scope
+    let myName = "Atinder Pal"; 
+    
     console.log(name);
 
 }
@@ -40,7 +42,7 @@ function displayName(){
 //showPrice not taking any parameter
 let showPrice = () => 4.5; 
 
-console.log(showPrice());
+//console.log(showPrice());
 
 //calculatePrice taking one parameter
 
@@ -98,7 +100,7 @@ function displayProduct(productId = 100){
 
 //If you pass a value, it will not look for default value's, 
 //But if you don't pass value's, it will look for default value's 
-displayProduct(300);
+//displayProduct(300);
 
 
 
@@ -118,7 +120,7 @@ function restExample(productId,...products){
 }
 
 
-restExample(1,"TV","FRIDGE","LED");
+//restExample(1,"TV","FRIDGE","LED");
 
 
 //SPREAD simply divides  an array, string into values
@@ -127,7 +129,7 @@ restExample(1,"TV","FRIDGE","LED");
 var spreadArr = ['A','B',..."CDE",'F'];
 
 
-console.log(spreadArr);
+//console.log(spreadArr);
 
 
 
@@ -148,11 +150,81 @@ var objectLiteral = {
 
 }
 
-console.log(objectLiteral);
+//console.log(objectLiteral);
 
 
 
 
+//___________________________________________
+
+// FOR...OF LOOP IN ES6 /////////////////////
+//___________________________________________
+
+
+let arrCars = ['Honda','Hyundai','Toyota','BMW'];
+
+for(var carModel of arrCars){
+
+    console.log(carModel);
+
+}
+
+
+//___________________________________________
+
+// OCTALS AND BINARY IN ES6 /////////////////
+//___________________________________________
+
+
+let myOctal = 0o10;
+console.log(myOctal);
+
+let myBinary = 0b10;
+console.log(myBinary);
+
+
+//___________________________________________
+
+// TEMPLATE LITERALS IN ES6 /////////////////
+//___________________________________________
+
+let price = 20;
+var stringOutput = `Price of product ${": $"+price}`;
+
+
+
+console.log(stringOutput);
+
+
+
+//___________________________________________
+
+// DESTRUCTURING IN ES6 /////////////////////
+//___________________________________________
+
+
+var carModels = ['Ferrari','Toyota','BMW'];
+
+//values of carModels array will be assigned to the variables inside `let`
+let [ferrari,toyota,bmw] = carModels; 
+
+console.log(ferrari);
+
+//Destructuring also works with Objects literals
+
+
+var toyotaCar = {
+    model : 'Corolla',
+    year  : '2014',
+    km    : '20000'
+    
+
+}
+
+let {model,year,km} = toyotaCar;
+
+
+console.log("Toyota model is "+model);
 
 
 
