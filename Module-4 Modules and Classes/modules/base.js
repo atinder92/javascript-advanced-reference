@@ -12,6 +12,6 @@ import {carMaker,carModel,displayInfo} from './module1.js';
 
 //console.log("CarMaker is "+carMaker);
 //console.log("CarModel is "+carModel);
-displayInfo();
+//displayInfo();
 
 
