@@ -54,3 +54,60 @@ for ( let val of valueIterator){
     console.log(val);
 
 }
+
+//___________________________________________
+
+//USING PROMISES IN ES6 /////////////////////
+//___________________________________________
+
+
+//Promises are very useful in asynchronous network operations
+
+let timeOutStatus = new Promise(function(resolve,reject){
+
+    setTimeout(function(){
+    
+        //resolving promise
+        resolve('Everything Ok');
+//        reject('Error');
+    
+    
+    },1000);
+
+
+});
+
+
+//first function is for resolve
+//second function is for reject
+timeOutStatus.then(function(data){
+
+    console.log(data);
+
+},function(data){
+
+console.log(data);
+    
+});
+
+
+//Promise object has also some useful static methods
+//Promise.all([P1,P2,..]).then();, waits for all the promises to finished
+//Promise.race([P1,P2,..]).then(), executes then(), when any of the promise in the array finishes first.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
