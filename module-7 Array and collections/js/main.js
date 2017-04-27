@@ -81,6 +81,44 @@ console.log(userTasks.has(user1));
 
 
 
+//-------------------------------------------
+
+//USING SETS  IN ES6 ////////////////////////
+//___________________________________________
+
+
+//creating set 
+
+let mySet = new Set();
+
+
+//adding values to set
+mySet.add('Hello');
+mySet.add('How');
+mySet.add('are you');
+
+
+
+console.log(mySet);
+
+//get set size
+console.log(mySet.size);
+
+
+//You can also pass an iterable to set constructor
+
+let setWithIterable = new Set([
+    'Toyota',
+    '2014',
+    'Corolla'
+
+]);
+
+console.log(setWithIterable);
+
+//for more information, check reference
+
+
 
 
 
