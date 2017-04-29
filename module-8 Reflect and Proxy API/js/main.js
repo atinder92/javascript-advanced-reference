@@ -180,7 +180,29 @@ console.log(personObjProxy.name);
 
 
 
+//Controlling access to functions using Proxy
 
+function getSalary(){
+
+    return 60000;
+    
+}
+
+
+console.log(getSalary());
+
+
+let getSalaryProxy = new Proxy(getSalary,{
+
+    apply:function(target,thisArg,argumentsList){
+        return Reflect.apply(target,thisArg,argumentsList);
+    
+    }
+
+
+})
+
+console.log(getSalaryProxy());
 
 
 
