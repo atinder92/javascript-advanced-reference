@@ -7,7 +7,7 @@
 
 //USING REFLECT API IN ES6 //////////////////
 //___________________________________________
-
+console.log("----- USING REFLECT API IN ES6 -----");
 
 //Using the REFLECT api we can call functions and also instantiate objects
 //without using new keyword
@@ -19,7 +19,7 @@ class Person {
     constructor(name,id){
         this.name = name;
         this.id  = id;
-        console.log(`name :${name} , id: ${id}`);
+//        console.log(`name :${name} , id: ${id}`);
     }
     
     sayHello(){
@@ -127,8 +127,56 @@ Reflect.preventExtensions(showInfo);
 
 
 
+//-------------------------------------------
+
+//USING PROXY API IN ES6 ////////////////////
+//___________________________________________
 
 
+
+console.log("----- USING PROXY API IN ES6 -----");
+
+
+//Using proxy, we can wrap an object (target)  and we can control access to its certain properties
+//The object which wraps target object is called proxy object or handler
+
+//Example of Using proxy object
+//controlling access to person properties
+
+let personObj = new Person("Atinder Singh",123);
+
+//Now we can easily log person properties
+
+console.log(personObj.name);
+console.log(personObj.id);
+
+
+//But using proxy API, we can control access to its properties
+
+let personObjProxy = new Proxy(personObj,{
+
+    get:function(target,prop,receiver){
+//        console.log(target);//Person
+//        console.log(prop);//property
+//        console.log(receiver);//Proxy
+    
+        if(prop == 'id'){
+        return 'Denied';
+        }
+        if(prop == 'name'){
+        return Reflect.get(target,prop,receiver);
+        }
+        
+    
+    }
+
+
+
+});
+
+//controlling access to id property
+console.log(personObjProxy.id); 
+console.log(personObjProxy.name); 
 
 
 
