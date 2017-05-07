@@ -5,7 +5,6 @@ var player = require('./player.js');
     
     
     player.setPlayerName('Atinder');
-    
     game.setPlayer(player);
     
     
@@ -13,6 +12,7 @@ var player = require('./player.js');
     game.setGameStatus('running');
     game.setGameType('arcade');
     game.whatPlayerDoing();
+    console.log('Using CommonJS format');
     console.log(`Game is ${game.getGameStatus()}`);
     console.log(`You are running game in ${game.getGameType()} mode`);
     

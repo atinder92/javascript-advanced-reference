@@ -23,3 +23,10 @@
 //->System.js
 
 
+//AMD format is very simple and written using define function
+
+//CommonJs format makes use of  `require` function to import module in a file
+// For example, the following line of code will import game module.
+
+//var game = require('./game.js');
+
