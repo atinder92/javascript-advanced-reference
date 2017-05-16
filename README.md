@@ -74,6 +74,28 @@ To include this functionality in .babelrc file, use the following json property 
 }
 ```
 
+### Converting ES6 module format using BabelJs
+
+We can easily convert the ES6 module format into different module formats such as commonjs, systemjs etc.
+
+To install commonjs plugin, use the following command : 
+
+`npm install --save-dev babel-plugin-transform-es2015-modules-commonjs`
+
+To include this functionality in .babelrc file, use the following json property in your .babelrc file
+
+```
+{
+  "plugins": ["transform-es2015-modules-commonjs"]
+}
+```
+
+
+
+
+
+
+
 
 
 
